@@ -77,7 +77,7 @@ export default function Widget() {
       return acc + _won;
     }, 0);
 
-    setWinrate(((_winrate / _history.length) * 100).toFixed(1));
+    setWinrate(((_winrate / _history.length) * 100).toFixed(2));
 
     const _kda = _history.reduce((acc, match) => {
       const __kda =
@@ -86,7 +86,7 @@ export default function Widget() {
       return acc + (__kda !== Infinity ? __kda : 0);
     }, 0);
 
-    setKda((_kda / _history.length).toFixed(1));
+    setKda((_kda / _history.length).toFixed(2));
   };
 
   useEffect(() => {
