@@ -77,7 +77,7 @@ export default function Widget() {
       return acc + _won;
     }, 0);
 
-    setWinrate(((_winrate / _history.length) * 100).toFixed(2));
+    setWinrate(((_winrate / _history.length) * 100).toFixed(0));
 
     const _kda = _history.reduce((acc, match) => {
       const __kda =
