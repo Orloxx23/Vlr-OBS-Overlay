@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
-const host = "https://overlay.taply.click";
+const host = "http://localhost:3000";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -94,7 +94,12 @@ export default function Home() {
                   value={widgetUrl ?? ""}
                   readOnly
                 />
-                <button className="bg-red-500 p-1 text-white font-bold uppercase rounded" onClick={copyToClipboard}>{copied ? "✅" : "copy"}</button>
+                <button
+                  className="bg-red-500 p-1 text-white font-bold uppercase rounded"
+                  onClick={copyToClipboard}
+                >
+                  {copied ? "✅" : "copy"}
+                </button>
               </div>
               <div className="flex justify-center items-center w-[452px] h-[128px]">
                 <iframe
