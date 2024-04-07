@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const host = "http://localhost:3000";
+const host = "https://overlay.taply.click";
 
 export default function Home() {
   const [name, setName] = useState("");

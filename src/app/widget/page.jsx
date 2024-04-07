@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
 
